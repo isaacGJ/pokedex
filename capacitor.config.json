@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "i-taco2",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
