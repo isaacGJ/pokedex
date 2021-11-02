@@ -3,10 +3,14 @@ import {IonCardContent, IonBadge, IonRow, IonCol} from "@ionic/react";
 
 const PokeDetails: React.FC<{ name: string }> = (props) => {
     const [pokemon, setPokemon] = useState(null);
-    useEffect(() => {
-        fetch('https://pokeapi.co/api/v2/pokemon/'+props.name)
+    const getPokemon = (name) => {
+        fetch('https://pokeapi.co/api/v2/pokemon/'+name)
             .then(response => response.json())
             .then(data => setPokemon(data));
+    }
+
+    useEffect(() => {
+        getPokemon(props.name);
     }, []);
     return (
         <Fragment>

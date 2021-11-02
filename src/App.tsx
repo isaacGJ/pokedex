@@ -24,6 +24,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './css/app.css';
+import './css/type-pokemon.css';
 import './theme/variables.css';
 import Tabs from "./pages/Tabs/Tabs";
 import React from "react";
