@@ -32,15 +32,7 @@ const PokeList: React.FC = () => {
         <Fragment>
             <IonRow>
                 {pokeList?.map((pokemon, index) =>
-                    <IonCol sizeXs={'12'} sizeSm={'6'} sizeMd={'4'} sizeLg={'4'} sizeXl={'3'} key={pokemon.name}>
-                        <IonCard>
-                            <IonCardHeader>
-                                <IonCardSubtitle>#{(index+1).toString()}</IonCardSubtitle>
-                                <IonCardTitle className={'ion-text-capitalize'}>{pokemon.name}</IonCardTitle>
-                            </IonCardHeader>
-                            <PokeDetails name={pokemon.name} />
-                        </IonCard>
-                    </IonCol>
+                    <PokeDetails pokemon={pokemon} index={index+1} />
                 )}
             </IonRow>
             <IonInfiniteScroll onIonInfinite={loadData} threshold="150px"
