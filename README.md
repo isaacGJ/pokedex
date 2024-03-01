@@ -10,5 +10,8 @@ Para poder ejecutar la aplicación solo deben correr los siguientes comandos.
 npm install
 ```
 ```
+npm install -g @ionic/cli
+```
+```
 ionic serve
 ```
